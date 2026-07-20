@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Environment Variables
+.env
+
+# Flask uploads
+uploads/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Logs
+*.log
+
+# SQLite
+*.db
+
+# Cache
+.cache/
+
+# Python cache
+.pytest_cache/
+
+# Build
+dist/
+build/
+
+# Bytecode
+*.egg-info/
