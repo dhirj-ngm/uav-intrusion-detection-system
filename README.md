@@ -87,7 +87,9 @@ python run.py
 
 ## 📸 Screenshots
 
-(Add screenshots here.)
+<img width="1600" height="945" alt="WhatsApp Image 2026-07-21 at 1 19 44 AM" src="https://github.com/user-attachments/assets/2c5c5db5-db1a-4cfa-b0ad-4d834c452be0" />
+<img width="1600" height="942" alt="WhatsApp Image 2026-07-21 at 1 19 44 AM (1)" src="https://github.com/user-attachments/assets/bbd869e8-a37a-47d1-abb0-28c9609e0577" />
+
 
 ## 👨‍💻 Author
 
