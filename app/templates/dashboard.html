@@ -3,16 +3,16 @@
 
 {% block content %}
 <header class="topbar">
-  <div>
+  <div class="topbar-title">
     <h1>Operational Security Monitor</h1>
     <p>Focused visibility for aerial network traffic and threat posture</p>
   </div>
   <div class="topbar-actions">
     <div class="date-pill" id="dateTime"></div>
-    <div class="notification-pill"><i class="bi bi-bell-fill"></i><span>3</span></div>
+    <div class="notification-pill" title="Active alerts"><i class="bi bi-bell-fill"></i><span>3</span></div>
     <div class="profile-pill">
       <div class="avatar">AI</div>
-      <div>
+      <div class="profile-meta">
         <strong>Analyst</strong>
         <p>Threat Operations</p>
       </div>
@@ -23,42 +23,42 @@
 <section class="stats-grid">
   <div class="stat-card glass-card">
     <div class="stat-icon blue"><i class="bi bi-box-seam"></i></div>
-    <div>
+    <div class="stat-body">
       <h3 id="totalPackets">1.24M</h3>
       <p>Total Packets</p>
     </div>
   </div>
   <div class="stat-card glass-card">
     <div class="stat-icon green"><i class="bi bi-check-circle"></i></div>
-    <div>
+    <div class="stat-body">
       <h3 id="normalTraffic">97.4%</h3>
       <p>Normal Traffic</p>
     </div>
   </div>
   <div class="stat-card glass-card">
     <div class="stat-icon red"><i class="bi bi-bug"></i></div>
-    <div>
+    <div class="stat-body">
       <h3 id="totalAttacks">3,482</h3>
       <p>Total Attacks</p>
     </div>
   </div>
   <div class="stat-card glass-card">
-    <div class="stat-icon purple"><i class="bi bi-speedometer"></i></div>
-    <div>
+    <div class="stat-icon cyan"><i class="bi bi-speedometer"></i></div>
+    <div class="stat-body">
       <h3 id="modelAccuracy">99.1%</h3>
       <p>Model Accuracy</p>
     </div>
   </div>
   <div class="stat-card glass-card">
-    <div class="stat-icon orange"><i class="bi bi-clock-history"></i></div>
-    <div>
+    <div class="stat-icon blue"><i class="bi bi-clock-history"></i></div>
+    <div class="stat-body">
       <h3 id="predictionTime">18 ms</h3>
       <p>Prediction Time</p>
     </div>
   </div>
   <div class="stat-card glass-card">
-    <div class="stat-icon cyan"><i class="bi bi-radar"></i></div>
-    <div>
+    <div class="stat-icon amber"><i class="bi bi-radar"></i></div>
+    <div class="stat-body">
       <h3 id="threatLevel">High</h3>
       <p>Threat Level</p>
     </div>
@@ -69,12 +69,13 @@
   <div class="card glass-card" id="uploadSection">
     <div class="card-header">
       <h5><i class="bi bi-cloud-arrow-up"></i> Upload Dataset</h5>
+      <span class="badge-pill">CSV</span>
     </div>
     <div class="card-body">
       <div id="dropZone" class="drop-zone">
-        <i class="bi bi-file-earmark-csv"></i>
-        <p>Drag & drop CSV here</p>
-        <span>or</span>
+        <div class="drop-icon"><i class="bi bi-file-earmark-csv"></i></div>
+        <p>Drag &amp; drop CSV here</p>
+        <span class="drop-or">or</span>
         <label class="btn btn-primary mt-2" for="csvFile">Browse Dataset</label>
         <input type="file" id="csvFile" accept=".csv" hidden />
       </div>
@@ -89,6 +90,7 @@
   <div class="card glass-card" id="predictionSection">
     <div class="card-header">
       <h5><i class="bi bi-cpu"></i> Prediction Engine</h5>
+      <span class="badge-pill">ML</span>
     </div>
     <div class="card-body">
       <p class="text-muted">Run inference on the uploaded traffic dataset and inspect live anomalies.</p>
@@ -170,10 +172,10 @@
     <div class="card-header"><h5><i class="bi bi-grid-3x3-gap"></i> Confusion Matrix</h5></div>
     <div class="card-body">
       <div class="matrix">
-        <div class="cell positive">TP<br/>1842</div>
-        <div class="cell negative">FP<br/>9</div>
-        <div class="cell negative">FN<br/>12</div>
-        <div class="cell positive">TN<br/>1619</div>
+        <div class="cell positive"><span class="cell-label">TP</span><span class="cell-value">1842</span></div>
+        <div class="cell negative"><span class="cell-label">FP</span><span class="cell-value">9</span></div>
+        <div class="cell negative"><span class="cell-label">FN</span><span class="cell-value">12</span></div>
+        <div class="cell positive"><span class="cell-label">TN</span><span class="cell-value">1619</span></div>
       </div>
     </div>
   </div>
@@ -182,7 +184,7 @@
 <section class="card glass-card mt-4" id="resultsSection">
   <div class="card-header d-flex justify-content-between align-items-center">
     <h5><i class="bi bi-table"></i> Prediction Results</h5>
-    <div class="badge-pill">Live inference output</div>
+    <div class="badge-pill live"><span class="live-dot"></span> Live inference output</div>
   </div>
   <div class="card-body">
     <div class="table-responsive">
@@ -204,8 +206,8 @@
 <section class="card glass-card mt-4" id="downloadSection">
   <div class="card-header"><h5><i class="bi bi-download"></i> Download Center</h5></div>
   <div class="card-body d-flex flex-wrap gap-3">
-    <button class="btn btn-primary" id="downloadCsvBtn">Download Prediction CSV</button>
-    <button class="btn btn-outline-info" id="downloadPdfBtn">Download PDF Report</button>
+    <button class="btn btn-primary" id="downloadCsvBtn"><i class="bi bi-filetype-csv me-2"></i>Download Prediction CSV</button>
+    <button class="btn btn-outline-info" id="downloadPdfBtn"><i class="bi bi-file-earmark-pdf me-2"></i>Download PDF Report</button>
   </div>
 </section>
 {% endblock %}

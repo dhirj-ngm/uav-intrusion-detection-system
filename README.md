@@ -248,13 +248,6 @@ This project is licensed under the MIT License.
 
 **Dheeraj Nigam**
 
-Final Year B.Tech Student
-
-Interested in Machine Learning, Data Science, Intelligent Systems, and AI-driven Decision Support.
-
-GitHub:
-https://github.com/dhirj-ngm
-
 ---
 
 ⭐ If you found this project interesting, consider giving it a star.
